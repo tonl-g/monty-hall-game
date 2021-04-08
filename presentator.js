@@ -35,20 +35,6 @@ const continueGame = () => {
   } 
 }
 
-const choice = () => {
-let choices = ['Gate 1', 'Gate 2', 'Gate 3']
-let index = readlineSync.keyInSelect(choices, 'Please select your choice: ')
-switch (index) {
-  case 0:
-    break
-  case 1:
-    break
-  case 2:
-    break
-  }
-}
-
 exports.startGame = startGame
 exports.rulesGame = rulesGame
 exports.continueGame = continueGame
-exports.choice = choice
