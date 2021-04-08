@@ -4,10 +4,10 @@ const fs = require('fs')
 const { readFileSync } = require('fs')
 const { randomInt } = require('crypto')
 const {startGame, rulesGame, continueGame} = require('./presentator')
-const {randomGates} = require('./random')
+const {randomGates, showGate} = require('./random')
 
 const loopGame = () => {
-const choices = ['Gate 1', 'Gate 2', 'Gate 3']
+const choices = ['Gate 0', 'Gate 1', 'Gate 2']
 let index = readlineSync.keyInSelect(choices, 'Please select your gate: ')
 switch (index) {
   case 0:
@@ -19,12 +19,16 @@ switch (index) {
   }
 
   if (index != randomGates) {
-    console.log(`Vous n'avez pas trouvé le voiture`)
+    if (randomGates != !randomGates) {
+      const convertGoat = randomGates.toString().replace(randomGates, 'goat')
+      // console.log(convertGoat)
+      console.log(`Gate ${index}: it's a goat`)
+    }
+    console.log(chalk.red(`Vous n'avez pas trouvé le voiture`))
   } else {
-    console.log(`Vous avez trouvé le voiture`)
+    console.log(chalk.green(`Félicitation! Vous avez trouvé le voiture`))
   }
 }
-
 
 // loopGame()
 
