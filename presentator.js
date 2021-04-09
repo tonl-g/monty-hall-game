@@ -6,13 +6,13 @@ const { randomInt } = require('crypto')
 
 // Start game
 const startGame = () => {
-  if (readlineSync.keyInYNStrict(chalk.blue(`Do you want play Monty Hall Game? `))) {
+  if (readlineSync.keyInYNStrict(chalk.blue(`Le présentateur: Bienvenue au jeu du Monty Hall Game? `))) {
   // 'y' key was pressed.
-  console.log('Start')
+  console.log('Prêt?')
   // continuer le programme
   } else {
   // 'n' key was pressed.
-  console.log('Bye')
+  console.log('Au revoir')
   process.exit(0)
   } 
 }
@@ -24,13 +24,13 @@ const rulesGame = () => {
 
 // Continue game
 const continueGame = () => {
-  if (readlineSync.keyInYNStrict(chalk.blue(`Do you want to continue? `))) {
+  if (readlineSync.keyInYNStrict(chalk.blue(`Voulez-vous continuer? `))) {
   // 'y' key was pressed.
-  console.log('Continue')
+  console.log('On continue?')
   // continuer le programme
   } else {
   // 'n' key was pressed.
-  console.log('Bye')
+  console.log('Au revoir')
   process.exit(0)
   } 
 }
