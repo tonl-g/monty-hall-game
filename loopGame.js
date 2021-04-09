@@ -3,7 +3,7 @@ const readlineSync = require('readline-sync')
 const fs = require('fs')
 const { readFileSync } = require('fs')
 const { randomInt } = require('crypto')
-const {startGame, rulesGame, continueGame} = require('./presentator')
+const {startGame, rulesGame} = require('./presentator')
 const {randomGates} = require('./random')
 
 const loopGame = () => {
@@ -25,7 +25,7 @@ switch (index) {
       console.log(`Gate ${index}: it's a ${convertGoat}`)
     }
     console.log(chalk.red(`Vous n'avez pas trouvé le voiture`))
-    console.log(chalk.red(`Vous avez le choix de garder votre porte ou de la changer avec l'autre porte restante`))
+    console.log(chalk.red(`Vous avez le choix de garder votre porte ${index} ou de la changer avec l'autre porte restante`))
   } else {
     console.log(chalk.green(`Félicitation! Vous avez trouvé le voiture`))
   }

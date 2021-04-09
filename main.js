@@ -3,5 +3,4 @@ const {loopGame} = require('./loopGame')
 
 startGame()
 rulesGame()
-continueGame()
 loopGame()
